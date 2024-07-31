@@ -1,10 +1,11 @@
-import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import app from "./app.js";
 import chalk from "chalk";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
+app.use(cookieParser());
 
 const PORT = process.env.PORT || 4000;
 const MONGODBURL = process.env.MONGODBURL;
