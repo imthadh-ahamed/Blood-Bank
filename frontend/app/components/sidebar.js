@@ -10,66 +10,66 @@ export default function Sidebar() {
   const pathname = usePathname(); // Use usePathname to get the current path
 
   return (
-    <aside className="w-15 border-r bg-background p-4 flex flex-col lg:relative lg:block lg:w-65">
+    <aside className="w-16 border-r bg-gray-100 dark:bg-gray-500 p-4 flex flex-col lg:relative lg:block lg:w-64">
       <nav className="flex flex-col gap-2">
         <Link
           href="/pages/home"
-          className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/home"
-              ? "bg-red-500 text-white" // Highlight with red background and white text
-              : "hover:bg-muted hover:text-foreground"
+              ? "bg-red-500 text-white"
+              : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
           }`}
           prefetch={false}
         >
-          <IoHomeOutline className="h-5 w-5" />
+          <IoHomeOutline className="h-6 w-6" />
           <span className="ml-2 hidden lg:inline">Home</span>
         </Link>
         <Link
           href="/pages/donor"
-          className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/donor"
-              ? "bg-red-500 text-white" // Highlight with red background and white text
-              : "hover:bg-muted hover:text-foreground"
+              ? "bg-red-500 text-white"
+              : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
           }`}
           prefetch={false}
         >
-          <LuUsers className="h-5 w-5" />
+          <LuUsers className="h-6 w-6" />
           <span className="ml-2 hidden lg:inline">Donor Management</span>
         </Link>
         <Link
           href="/pages/inventory"
-          className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/inventory"
-              ? "bg-red-500 text-white" // Highlight with red background and white text
-              : "hover:bg-muted hover:text-foreground"
+              ? "bg-red-500 text-white"
+              : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
           }`}
           prefetch={false}
         >
-          <LuPackage className="h-5 w-5" />
+          <LuPackage className="h-6 w-6" />
           <span className="ml-2 hidden lg:inline">Inventory Management</span>
         </Link>
         <Link
           href="/pages/reservation"
-          className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/reservation"
-              ? "bg-red-500 text-white" // Highlight with red background and white text
-              : "hover:bg-muted hover:text-foreground"
+              ? "bg-red-500 text-white"
+              : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
           }`}
           prefetch={false}
         >
-          <CiCalendar className="h-5 w-5" />
+          <CiCalendar className="h-6 w-6" />
           <span className="ml-2 hidden lg:inline">Reservation Management</span>
         </Link>
         <Link
           href="/pages/supply"
-          className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/supply"
-              ? "bg-red-500 text-white" // Highlight with red background and white text
-              : "hover:bg-muted hover:text-foreground"
+              ? "bg-red-500 text-white"
+              : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
           }`}
           prefetch={false}
         >
-          <CiDeliveryTruck className="h-5 w-5" />
+          <CiDeliveryTruck className="h-6 w-6" />
           <span className="ml-2 hidden lg:inline">Supply Management</span>
         </Link>
       </nav>
