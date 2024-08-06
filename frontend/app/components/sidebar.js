@@ -14,19 +14,19 @@ export default function Sidebar() {
       <nav className="flex flex-col gap-2">
         <Link
           href="/pages/home"
-          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
+          className={`flex items-center gap-3 rounded-md lg:px-3 px-2 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/home"
               ? "bg-red-500 text-white"
               : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
           }`}
           prefetch={false}
         >
-          <IoHomeOutline className="h-6 w-6" />
+          <IoHomeOutline className="w-6 h-6" />
           <span className="ml-2 hidden lg:inline">Home</span>
         </Link>
         <Link
           href="/pages/donor"
-          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
+          className={`flex items-center gap-3 rounded-md lg:px-3 px-2 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/donor"
               ? "bg-red-500 text-white"
               : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
@@ -38,7 +38,7 @@ export default function Sidebar() {
         </Link>
         <Link
           href="/pages/inventory"
-          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
+          className={`flex items-center gap-3 rounded-md lg:px-3 px-2 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/inventory"
               ? "bg-red-500 text-white"
               : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
@@ -50,7 +50,7 @@ export default function Sidebar() {
         </Link>
         <Link
           href="/pages/reservation"
-          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
+          className={`flex items-center gap-3 rounded-md lg:px-3 px-2 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/reservation"
               ? "bg-red-500 text-white"
               : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
@@ -62,7 +62,7 @@ export default function Sidebar() {
         </Link>
         <Link
           href="/pages/supply"
-          className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
+          className={`flex items-center gap-3 rounded-md lg:px-3 px-2 py-2 text-sm font-medium transition-colors duration-200 ease-in-out ${
             pathname === "/pages/supply"
               ? "bg-red-500 text-white"
               : "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-500"
