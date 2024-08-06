@@ -22,8 +22,8 @@ export default function Home() {
         <div className="grid gap-10 m-6">
           <div className="grid grid-cols-1 gap-4 mt-5 sm:grid-cols-2 lg:grid-cols-4">
             <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <CardHeader>
-                <CardTitle>Total Donors</CardTitle>
+              <CardHeader className="text-center p-2">
+                <CardTitle className="text-xl">Total Donors</CardTitle>
               </CardHeader>
               <CardContent className="flex items-center justify-between">
                 <div className="text-4xl font-bold">1,234</div>
@@ -31,8 +31,8 @@ export default function Home() {
               </CardContent>
             </Card>
             <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <CardHeader>
-                <CardTitle>Blood Inventory</CardTitle>
+              <CardHeader className="text-center p-2">
+                <CardTitle className="text-xl">Blood Inventory</CardTitle>
               </CardHeader>
               <CardContent className="flex items-center justify-between">
                 <div className="text-4xl font-bold">5,678</div>
@@ -40,8 +40,8 @@ export default function Home() {
               </CardContent>
             </Card>
             <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <CardHeader>
-                <CardTitle>Pending Reservations</CardTitle>
+              <CardHeader className="text-center p-2">
+                <CardTitle className="text-xl">Pending Reservations</CardTitle>
               </CardHeader>
               <CardContent className="flex items-center justify-between">
                 <div className="text-4xl font-bold">123</div>
@@ -49,8 +49,8 @@ export default function Home() {
               </CardContent>
             </Card>
             <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <CardHeader>
-                <CardTitle>Supplies Needed</CardTitle>
+              <CardHeader className="text-center p-2">
+                <CardTitle className="text-xl">Supplies Needed</CardTitle>
               </CardHeader>
               <CardContent className="flex items-center justify-between">
                 <div className="text-4xl font-bold">45</div>
@@ -60,8 +60,8 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <CardHeader>
-                <CardTitle>Recent Donors</CardTitle>
+              <CardHeader className="text-center p-2">
+                <CardTitle className="text-xl">Recent Donors</CardTitle>
               </CardHeader>
               <CardContent>
                 <Table>
@@ -93,8 +93,8 @@ export default function Home() {
               </CardContent>
             </Card>
             <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <CardHeader>
-                <CardTitle>Upcoming Reservations</CardTitle>
+              <CardHeader className="text-center p-2">
+                <CardTitle className="text-xl">Upcoming Reservations</CardTitle>
               </CardHeader>
               <CardContent>
                 <Table>
@@ -126,8 +126,8 @@ export default function Home() {
               </CardContent>
             </Card>
             <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <CardHeader>
-                <CardTitle>Low Supply Items</CardTitle>
+              <CardHeader className="text-center p-2">
+                <CardTitle className="text-xl">Low Supply Items</CardTitle>
               </CardHeader>
               <CardContent>
                 <Table>

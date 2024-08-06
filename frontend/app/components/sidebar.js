@@ -4,10 +4,10 @@ import { LuUsers, LuPackage } from "react-icons/lu";
 import { CiCalendar, CiDeliveryTruck } from "react-icons/ci";
 import { IoHomeOutline } from "react-icons/io5";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
-  const pathname = usePathname(); // Use usePathname to get the current path
+  const pathname = usePathname();
 
   return (
     <aside className="w-16 border-r bg-gray-100 dark:bg-gray-500 p-4 flex flex-col lg:relative lg:block lg:w-64">
