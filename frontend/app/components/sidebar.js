@@ -10,7 +10,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-16 border-r bg-gray-100 dark:bg-gray-500 p-4 flex flex-col lg:relative lg:block lg:w-64">
+    <aside className="w-16 border-r bg-gray-100 dark:bg-gray-500 p-4 flex flex-col lg:relative lg:block lg:w-72">
       <nav className="flex flex-col gap-2">
         <Link
           href="/pages/home"
