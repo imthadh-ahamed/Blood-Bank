@@ -65,7 +65,7 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-white"
                   role="menuitem"
                 >
                   Profile
@@ -73,8 +73,8 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  href="/"
+                  className="block px-4 py-2 text-sm text-gray-700 dark:hover:bg-red-500 hover:text-white"
                   role="menuitem"
                 >
                   Logout
