@@ -20,7 +20,8 @@ import CustomModal from "../../components/modal.js";
 export default function Home() {
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const [isDonorsModalOpen, setIsDonorsModalOpen] = useState(false);
-  const [isCheckEligibilityModalOpen, setIsCheckEligibilityModalOpen] = useState(false);
+  const [isCheckEligibilityModalOpen, setIsCheckEligibilityModalOpen] =
+    useState(false);
   const [isViewCriteriaModalOpen, setIsViewCriteriaModalOpen] = useState(false);
   const [donorEligibility, setDonorEligibility] = useState({
     1: false, // Example donor IDs and their eligibility status
@@ -33,7 +34,36 @@ export default function Home() {
       [id]: !prev[id],
     }));
   };
+  const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false);
+  const [isViewAppointmentsModalOpen, setIsViewAppointmentsModalOpen] =
+    useState(false);
+  const [appointmentDetails, setAppointmentDetails] = useState({
+    donorName: "",
+    bloodType: "",
+    appointmentDate: "",
+  });
 
+  const handleAppointmentInputChange = (e) => {
+    const { name, value } = e.target;
+    setAppointmentForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
+
+  const handleAppointmentSubmit = (e) => {
+    e.preventDefault();
+    setAppointments((prevAppointments) => [
+      ...prevAppointments,
+      appointmentForm,
+    ]);
+    setAppointmentForm({
+      donorName: "",
+      bloodType: "",
+      appointmentDate: "",
+    });
+    setIsScheduleModalOpen(false);
+  };
 
   return (
     <main className="flex">
@@ -100,7 +130,10 @@ export default function Home() {
                   <CardTitle className="text-xl">Donor Appointments</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col items-center justify-center p-2 gap-2">
-                  <Button className="bg-red-500 text-white p-2">
+                  <Button
+                    className="bg-red-500 text-white p-2"
+                    onClick={() => setIsScheduleModalOpen(true)}
+                  >
                     <CiCalendar className="h-5 w-5 mr-2" />
                     Schedule Appointment
                   </Button>
@@ -108,6 +141,7 @@ export default function Home() {
                     href="#"
                     className="text-primary hover:underline"
                     prefetch={false}
+                    onClick={() => setIsViewAppointmentsModalOpen(true)}
                   >
                     View Upcoming Appointments
                   </Link>
@@ -368,6 +402,119 @@ export default function Home() {
           <li>No recent tattoos or piercings within the last 6 months.</li>
           <li>Free from any major medical conditions.</li>
         </ul>
+      </CustomModal>
+
+      {/* Schedule Appointment form Modal */}
+      <CustomModal
+        isOpen={isScheduleModalOpen}
+        onRequestClose={() => setIsScheduleModalOpen(false)}
+      >
+        <h2 className="text-xl mb-4">Schedule Appointment</h2>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            setIsScheduleModalOpen(false);
+            setAppointmentDetails({
+              donorName: e.target.donorName.value,
+              bloodType: e.target.bloodType.value,
+              appointmentDate: e.target.appointmentDate.value,
+            });
+          }}
+        >
+          <div className="mb-4">
+            <label
+              className="block text-sm font-medium mb-2"
+              htmlFor="donorName"
+            >
+              Donor Name
+            </label>
+            <input
+              className="border p-2 w-full"
+              type="text"
+              id="donorName"
+              name="donorName"
+              value={appointmentDetails.donorName}
+              onChange={(e) =>
+                setAppointmentDetails({
+                  ...appointmentDetails,
+                  donorName: e.target.value,
+                })
+              }
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-sm font-medium mb-2"
+              htmlFor="bloodType"
+            >
+              Blood Type
+            </label>
+            <input
+              className="border p-2 w-full"
+              type="text"
+              id="bloodType"
+              name="bloodType"
+              value={appointmentDetails.bloodType}
+              onChange={(e) =>
+                setAppointmentDetails({
+                  ...appointmentDetails,
+                  bloodType: e.target.value,
+                })
+              }
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-sm font-medium mb-2"
+              htmlFor="appointmentDate"
+            >
+              Appointment Date
+            </label>
+            <input
+              className="border p-2 w-full"
+              type="date"
+              id="appointmentDate"
+              name="appointmentDate"
+              value={appointmentDetails.appointmentDate}
+              onChange={(e) =>
+                setAppointmentDetails({
+                  ...appointmentDetails,
+                  appointmentDate: e.target.value,
+                })
+              }
+              required
+            />
+          </div>
+          <Button className="bg-red-500 text-white p-2 w-full" type="submit">
+            Schedule
+          </Button>
+        </form>
+      </CustomModal>
+
+      {/* View Scheduled Appointment Table Modal */}
+      <CustomModal
+        isOpen={isViewAppointmentsModalOpen}
+        onRequestClose={() => setIsViewAppointmentsModalOpen(false)}
+      >
+        <h2 className="text-xl mb-4">Appointment Details</h2>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Donor Name</TableHead>
+              <TableHead>Blood Type</TableHead>
+              <TableHead>Appointment Date</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell>{appointmentDetails.donorName}</TableCell>
+              <TableCell>{appointmentDetails.bloodType}</TableCell>
+              <TableCell>{appointmentDetails.appointmentDate}</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
       </CustomModal>
     </main>
   );
