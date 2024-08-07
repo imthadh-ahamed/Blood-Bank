@@ -12,7 +12,6 @@ import { TbUsers } from "react-icons/tb";
 import { LuPackage } from "react-icons/lu";
 import { CiCalendar, CiDeliveryTruck } from "react-icons/ci";
 import { HiOutlineInformationCircle } from "react-icons/hi";
-// import { Tooltip } from "@mui/material";
 
 export default function Home() {
   return (
