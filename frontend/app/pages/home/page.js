@@ -62,7 +62,7 @@ export default function Home() {
               <CardHeader className="text-center p-2">
                 <CardTitle className="text-xl">Recent Donors</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className={"max-h-72 overflow-y-auto"}>
                 <Table>
                   <TableHeader>
                     <TableRow>
@@ -95,7 +95,7 @@ export default function Home() {
               <CardHeader className="text-center p-2">
                 <CardTitle className="text-xl">Upcoming Reservations</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className={"max-h-72 overflow-y-auto"}>
                 <Table>
                   <TableHeader>
                     <TableRow>
@@ -128,7 +128,7 @@ export default function Home() {
               <CardHeader className="text-center p-2">
                 <CardTitle className="text-xl">Low Supply Items</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className={"max-h-72 overflow-y-auto"}>
                 <Table>
                   <TableHeader>
                     <TableRow>
