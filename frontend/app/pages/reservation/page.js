@@ -100,7 +100,7 @@ export default function page() {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <Card className="hover:shadow-lg transition-shadow duration-300 ease-in-out">
                 <CardHeader className="text-center p-2">
-                  <CardTitle className="text-xl">Total By Blood Type</CardTitle>
+                  <CardTitle className="text-xl">Total Reservations By Blood Type</CardTitle>
                 </CardHeader>
                 <CardContent className={"max-h-72 overflow-y-auto"}>
                   <Table>
