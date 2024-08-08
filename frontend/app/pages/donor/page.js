@@ -24,7 +24,7 @@ export default function Home() {
     useState(false);
   const [isViewCriteriaModalOpen, setIsViewCriteriaModalOpen] = useState(false);
   const [donorEligibility, setDonorEligibility] = useState({
-    1: false, // Example donor IDs and their eligibility status
+    1: false,
     2: false,
     3: false,
   });
@@ -153,7 +153,7 @@ export default function Home() {
                 <CardHeader className="text-center p-2">
                   <CardTitle className="text-xl">Recent Donors</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className={"max-h-72 overflow-y-auto"}>
                   <Table>
                     <TableHeader>
                       <TableRow>
@@ -188,7 +188,7 @@ export default function Home() {
                     Upcoming Appointments
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className={"max-h-72 overflow-y-auto"}>
                   <Table>
                     <TableHeader>
                       <TableRow>
@@ -223,7 +223,7 @@ export default function Home() {
                     Donor Deferral History
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className={"max-h-72 overflow-y-auto"}>
                   <Table>
                     <TableHeader>
                       <TableRow>
